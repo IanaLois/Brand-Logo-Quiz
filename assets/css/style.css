@@ -13,20 +13,41 @@ h1 {
     color: #000;
     letter-spacing: 0.3rem;
     text-align: center;
-    margin-top: 3.5rem;
-    margin-bottom: 10.5rem;
+    margin: 2.5rem 0;
     border-bottom: 0.5rem solid #000;
 }
 
 .game-container {
-    width: 75vw;
-    height: 75vh;
+    width: 95vw;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
-    margin: 75px auto;
+    margin: 5px auto;
     padding: 2rem;
-    border: 0.5rem solid #000; /* Display the game-container section*/
+    border: 0.5rem solid #000;
     border-radius: 1rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-size: 3rem;
+    color: #000;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    border: 0.5rem solid #000;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem 0;
 }
