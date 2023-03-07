@@ -9,11 +9,24 @@
 }
 
 h1 {
-    font-size: 6.4rem;
-    color: #FF9770;
-    letter-spacing: 0.2rem;
-    border-bottom: 0.5rem solid #FF9770;
+    font-size: 6rem;
+    color: #000;
+    letter-spacing: 0.3rem;
     text-align: center;
-    margin-top: 22.5rem;
+    margin-top: 3.5rem;
     margin-bottom: 10.5rem;
+    border-bottom: 0.5rem solid #000;
+}
+
+.game-container {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 75px auto;
+    padding: 2rem;
+    border: 0.5rem solid #000; /* Display the game-container section*/
+    border-radius: 1rem;
 }
