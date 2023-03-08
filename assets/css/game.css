@@ -1,0 +1,27 @@
+.choice-container {
+    display: flex;
+    border-radius: 1rem;
+    background-color: #000;
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.choice-container p {
+    color: #fff;
+    padding: 0.4rem;
+    margin: 0.3rem;
+}
+
+.choices-layout {
+    display: flex;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    background-color: #000;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
