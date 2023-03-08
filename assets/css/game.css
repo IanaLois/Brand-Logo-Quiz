@@ -4,7 +4,9 @@
     background-color: #000;
     font-size: 3rem;
     padding: 1rem;
-    margin: 1rem;
+    margin: 5rem;
+    width: 20rem;
+    justify-content: space-between;
 }
 
 .choice-container p {
@@ -17,11 +19,3 @@
     display: flex;
 }
 
-.choice-container:hover {
-    cursor: pointer;
-    border-radius: 0.4rem;
-    color: #ffffff;
-    background-color: #000;
-    font-weight: bold;
-    transition: .3s ease-in-out;
-}
