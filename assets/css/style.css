@@ -80,7 +80,7 @@ h2 {
 
 /* Button hover glow effect by https://codepen.io/kocsten */
 .glow-on-hover {
-    width: 30%;
+    width: 40%;
     border: none;
     outline: none;
     color: #fff;
@@ -137,4 +137,8 @@ h2 {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+a i {
+    font-size: 3rem;
 }
