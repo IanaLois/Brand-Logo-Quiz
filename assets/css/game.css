@@ -20,10 +20,12 @@
 
 .top-row {
     display: flex;
+    flex-flow: row wrap;
 }
 
 .bottom-row {
     display: flex;
+    flex-flow: row wrap;
 }
 
 /* Green color change if correct */
