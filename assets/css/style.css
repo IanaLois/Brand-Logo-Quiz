@@ -8,7 +8,7 @@
     font-size: 62.5%; /* 62.5% of 16px browser font size is 10px */
 }
 
-body {
+:root {
     background-image: url("../images/brand-logo-background.jpg");
     background-size: contain;
     background-position: center;

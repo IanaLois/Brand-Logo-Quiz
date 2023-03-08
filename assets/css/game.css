@@ -39,3 +39,17 @@
     background-color: #ff0000;
 }
 
+#head-up-display {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.5rem 10rem 2.5rem;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
