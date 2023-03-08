@@ -1,3 +1,4 @@
+/* Choice boxes */
 .choice-container {
     display: flex;
     border-radius: 1rem;
@@ -38,6 +39,7 @@
     background-color: #ff0000;
 }
 
+/* HUD Question Counter */
 #head-up-display {
     display: flex;
     justify-content: space-between;

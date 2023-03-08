@@ -1,6 +1,6 @@
 // Declare variables
-const logoQuestion = document.querySelector('#logo-question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+const question = document.getElementById('question');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
@@ -11,9 +11,10 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Core Question Structure
 let questions = [
     {
-        question: 'What is 2 + 2?',
+        question: 'What is 2 + 2',
         choice1: '1',
         choice2: '3',
         choice3: '5',
@@ -52,4 +53,8 @@ let questions = [
         choice4: '4',
         answer: 1,
     }
-]
+];
+
+// Declare core game constants
+const SCORE_POINTS = 10;
+const MAX_QUESTIONS = 5;

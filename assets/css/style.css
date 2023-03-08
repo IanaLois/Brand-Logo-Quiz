@@ -1,3 +1,4 @@
+/* Link to Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
 * {
@@ -139,6 +140,7 @@ h2 {
     100% { background-position: 0 0; }
 }
 
+/* Highscores Icon */
 a i {
     font-size: 3rem;
 }
