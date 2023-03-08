@@ -28,3 +28,14 @@
 .bottom-row {
     display: flex;
 }
+
+/* Green color change if correct */
+.correct {
+    background-color: #48ff00;
+}
+
+/* Red color change if incorrect */
+.incorrect {
+    background-color: #ff0000;
+}
+
