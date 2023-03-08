@@ -17,5 +17,14 @@
 
 .choices-layout {
     display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
+.top-row {
+    display: flex;
+}
+
+.bottom-row {
+    display: flex;
+}
