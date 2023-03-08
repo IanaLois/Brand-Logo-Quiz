@@ -55,3 +55,18 @@ p i {
     color: #fff;
     font-size: 3rem;
 }
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.4rem solid #000;
+    margin-top: 2rem;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: #000;
+    width: 0%;
+}
