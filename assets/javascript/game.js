@@ -23,11 +23,11 @@ let availableQuestions = [];
 let questions = [
     {
         question: 'https://media.graphassets.com/PdRpmfEjRWyXsmF3Z4Ex',
-        choice1: '1',
-        choice2: '3',
-        choice3: '5',
-        choice4: '4',
-        answer: 4,
+        choice1: 'Dickies',
+        choice2: 'Carhartt',
+        choice3: 'North Face',
+        choice4: 'Columbia',
+        answer: 2,
     },
     {
         question: 'https://pbs.twimg.com/profile_images/1628100176437968910/pCKhYh2f_400x400.jpg',

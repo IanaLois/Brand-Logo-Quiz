@@ -9,8 +9,8 @@
 
 .choices-layout {
     display: flex;
-    flex-flow: wrap;
     justify-content: center;
+    flex-flow: row wrap;
 }
 
 .choice-text {
@@ -26,14 +26,13 @@
     margin-left: 3rem;
 }
 
-.top-row {
+.left-area,
+.right-area {
     display: flex;
-    flex-flow: row wrap;
-}
-
-.bottom-row {
-    display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    padding: 1rem;
+    width: 30rem;
+    margin: 1rem;
 }
 
 /* Green color change if correct */
