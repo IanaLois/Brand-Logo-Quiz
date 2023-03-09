@@ -95,4 +95,17 @@ getNewQuestion = () => {
     acceptingAnswers = true; // Allow user to answer after question has loaded
 };
 
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        // When content is not ready to be answered
+        if(!acceptingAnswers) return;
+        
+        acceptingAnswers = false; // New question delay
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        
+        getNewQuestion();
+    });
+});
+
 startGame();
