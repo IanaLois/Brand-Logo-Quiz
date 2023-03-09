@@ -50,7 +50,7 @@
 #head-up-display {
     display: flex;
     justify-content: space-between;
-    margin: 0 2.5rem 6rem 2.5rem;
+    margin: 2rem 2.5rem -7rem 2.5rem;
 }
 
 .hud-prefix {
@@ -75,4 +75,9 @@
     height: 100%;
     background: #000;
     width: 0%;
+}
+
+/* Logos */
+.photo-layout {
+    text-align: center;
 }

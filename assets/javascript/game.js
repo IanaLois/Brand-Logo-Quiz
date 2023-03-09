@@ -22,7 +22,7 @@ let availableQuestions = [];
 // Core Question Structure
 let questions = [
     {
-        question: 'What is 2 + 2',
+        question: 'https://media.graphassets.com/PdRpmfEjRWyXsmF3Z4Ex',
         choice1: '1',
         choice2: '3',
         choice3: '5',
@@ -30,7 +30,7 @@ let questions = [
         answer: 4,
     },
     {
-        question: 'What is 4 + 2?',
+        question: 'https://pbs.twimg.com/profile_images/1628100176437968910/pCKhYh2f_400x400.jpg',
         choice1: '1',
         choice2: '6',
         choice3: '5',
@@ -82,7 +82,7 @@ getNewQuestion = () => {
     questionCounter++; // Increment question by 1
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); // Get random question between 0 and max questions
     currentQuestion = availableQuestions[questionIndex]; // Current question taken from array
-    question.innerText = currentQuestion.question; // Display current question for the user
+    question.src = currentQuestion.question; // Display current question for the user
     
     // Display all choices to its corresponding question
     choices.forEach((choice) => {
