@@ -1,25 +1,19 @@
 // Declare variables
 const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-const progressText = document.querySelector('#progressText');
+const choices = Array.from(document.getElementsByClassName('option-text'));
+const questionProgress = document.querySelector('#questionProgress');
 const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull');
+const questionProgressBarFull = document.querySelector('#questionProgressBarFull');
+
+const scorePoints = 10;
+const maxQuestions = 5;
 
 let currentQuestion = {};
-
-// User cannot answer until content has been loaded
 let acceptingAnswers = false;
-
-// Score begins at zero
 let score = 0; 
-
-// What question the user is on
 let questionCounter = 0; 
-
-// Provide a unique question to give the user
 let availableQuestions = []; 
 
-// Core Question Structure
 let questions = [
     {
         question: 'https://media.graphassets.com/PdRpmfEjRWyXsmF3Z4Ex',
@@ -63,46 +57,39 @@ let questions = [
     }
 ];
 
-// Declare core game constants
-const SCORE_POINTS = 10;
-const MAX_QUESTIONS = 5;
-
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions]; // Copy all questions from question array
+    availableQuestions = questions;
     getNewQuestion();
 };
 
 getNewQuestion = () => {
-    // When user has answered all available questions
-    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        return window.location.assign('/end.html'); // Direct to game end page
+    if (availableQuestions.length === 0) {
+        return window.location.assign('/end.html');
     }
-    questionCounter++; // Increment question by 1
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length); // Get random question between 0 and max questions
-    currentQuestion = availableQuestions[questionIndex]; // Current question taken from array
-    question.src = currentQuestion.question; // Display current question for the user
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.src = currentQuestion.question;
     
-    // Display all choices to its corresponding question
     choices.forEach((choice) => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
+        const option = choice.dataset['option'];
+        choice.innerText = currentQuestion['choice' + option];
     });
     
-    availableQuestions.splice(questionIndex, 1); // Removes used question from array
+    availableQuestions.splice(questionIndex, 1);
     
-    acceptingAnswers = true; // Allow user to answer after question has loaded
+    acceptingAnswers = true; 
 };
 
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
-        // When content is not ready to be answered
         if(!acceptingAnswers) return;
         
-        acceptingAnswers = false; // New question delay
+        acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+        const selectedAnswer = selectedChoice.dataset['option'];
         
         getNewQuestion();
     });
