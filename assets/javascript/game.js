@@ -7,7 +7,7 @@ const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {};
 
-// Creates delay before a new question can be answered
+// User cannot answer until content has been loaded
 let acceptingAnswers = false;
 
 // Score begins at zero
@@ -72,6 +72,27 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions]; // Copy all questions from question array
     getNewQuestion();
+};
+
+getNewQuestion = () => {
+    // When user has answered all available questions
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        return window.location.assign('/end.html'); // Direct to game end page
+    }
+    questionCounter++; // Increment question by 1
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length); // Get random question between 0 and max questions
+    currentQuestion = availableQuestions[questionIndex]; // Current question taken from array
+    question.innerText = currentQuestion.question; // Display current question for the user
+    
+    // Display all choices to its corresponding question
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
+    
+    availableQuestions.splice(questionIndex, 1); // Removes used question from array
+    
+    acceptingAnswers = true; // Allow user to answer after question has loaded
 };
 
 startGame();
