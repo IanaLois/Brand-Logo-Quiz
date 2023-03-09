@@ -11,19 +11,14 @@
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    margin-right: 6rem;
 }
 
 .choice-text {
     width: 100%;
-    text-align: end;
+    text-align: center;
     padding: 2rem;
     font-size: 3rem;
-}
-
-.choice-shape {
-    color: #fff;
-    font-size: 5rem;
-    margin-left: 3rem;
 }
 
 .left-area,
@@ -49,7 +44,8 @@
 #head-up-display {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 2.5rem -7rem 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: -9rem;
 }
 
 .hud-prefix {
