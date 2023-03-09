@@ -6,10 +6,18 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
+
+// Creates delay before a new question can be answered
+let acceptingAnswers = false;
+
+// Score begins at zero
+let score = 0; 
+
+// What question the user is on
+let questionCounter = 0; 
+
+// Provide a unique question to give the user
+let availableQuestions = []; 
 
 // Core Question Structure
 let questions = [
@@ -58,3 +66,12 @@ let questions = [
 // Declare core game constants
 const SCORE_POINTS = 10;
 const MAX_QUESTIONS = 5;
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions]; // Copy all questions from question array
+    getNewQuestion();
+};
+
+startGame();
