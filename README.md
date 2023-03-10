@@ -80,7 +80,7 @@ The Brand Logo Quiz is a fun and interactive quiz game to test the user's genera
 [Object Image bug](assets/images/screenshots/image-bug.png)
   - The image url value in the questions object would display as a string for each question.
   - Fixed this issue by assigning the question property to the src property of an element of image type.
-  - Changing the <div id = “question”></div> into <img id = “question” src=””>.
+  - Changing the div id = “question” into img id = “question” src=””.
   - Inputting the src class with the first image url of the first question.
 
 ## Deployment
