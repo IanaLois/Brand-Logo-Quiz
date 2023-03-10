@@ -1,108 +1,114 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Brand Logo Quiz
 
-Welcome IanaLois,
+The Brand Logo Quiz is a fun and interactive quiz game to test the user's general brand logo knowledge. The user is given 8 randomised questions to answer and 4 choices to choose from. Correct answers are awarded 25 points while incorrect answers earn 0 points. When the game is completed, the user's final score is displayed and they are given two options to redirect home or to restart the game again. Developed by programming languages HTML, CSS, and Javascript.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Am I Responsive Screenshot](/assets/images/screenshots/name-that-brand-logo-responsive.png)
+## Features 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Existing Features
 
-## Gitpod Reminders
+- __Home Menu__
+  - A full responsive home menu with the play button in the center. 
+  - When user moves their cursor over the button, a rainbow moving glow effect occurs.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Home Menu](assets/images/screenshots/home-menu.png)
 
-`python3 -m http.server`
+- __Question Page__
 
-A blue button should appear to click: _Make Public_,
+  - A complete responsive question page that runs across 8 questions.
+  - A question counter tells the user which question they're on and how many are left.
+  - A progress bar underneath also helps visualise it.
+  - A score counter is on the top right corner and will display and add score points if user gets the correct answer.
+  - The logo sits in the center and four choices are beneath for the user to choose.
 
-Another blue button should appear to click: _Open Browser_.
+![Question Page](/assets/images/screenshots/question-page.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Correct Answer Display](assets/images/screenshots/correct-answer-display.png)
+![Incorrect Answer Display](assets/images/screenshots/incorrect-answer-display.png)
 
-A blue button should appear to click: _Make Public_,
+- __End Page__
 
-Another blue button should appear to click: _Open Browser_.
+  - User has reached the end of the game and their score gets tallied up.
+  - They are given two buttons to redirect them home or to play the game again.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![End Page](assets/images/screenshots/end-page.png)
 
-To log into the Heroku toolbelt CLI:
+- __Background Image__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - This image was chosen as the background for its playful and colourful atmosphere.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Background Image](assets/images/brand-logo-background.jpg)
 
-------
+## Technology Used
 
-## Release History
+* HTML, CSS & Javascript programming languages
+* [Google Fonts](https://fonts.google.com/) - Patua One Style
+* [Gitpod](https://www.gitpod.io/) - Cloud development environment
+* [GitHub](https://github.com/) - Repositories
+* [Ui.Dev](https://ui.dev/amiresponsive) - Website on different screens
+* [Sweetalert2](https://sweetalert2.github.io/) - Correct and incorrect answers alert
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  - Testing was carried out by Chrome DevTools to ensure the website had the appropriate scaling for different screens and for testing code in console.
+  - Game was tested to ensure the user would be given the appropriate message alerts for correct and incorrect answers.
+  - Game was tested to ensure the appropriate points were given for correct and incorrect answers. It was also tested if the scores added up correctly and was saved towards the end.
+  - Game was tested to ensure the user was informed of the appropriate information about what question number they are currently in. It was also tested if the question counter was fully functional.
+  - Game was tested to ensure the questions were randomised as desired.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - Lighthouse
+    - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
+      ![Lighthouse Report](assets/images/screenshots/lighthouse-desktop-report.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Validator Testing 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- HTML
+  - No errors were found when passing through the official [W3C validator](https://validator.w3.org/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Javascript
+  - No errors were found when passing through the official [JSHint](https://jshint.com/)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Bugs Encountered & Resolved
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Sweet Alert bug](assets/images/screenshots/font-size-bug.png)
+  - Sweet alert could not function properly.
+  - Fixed by removing font-size: 62.5% from * element to html element.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+[Object Image bug](assets/images/screenshots/image-bug.png)
+  - The image url value in the questions object would display as a string for each question.
+  - Fixed this issue by assigning the question property to the src property of an element of image type.
+  - Changing the <div id = “question”></div> into <img id = “question” src=””>.
+  - Inputting the src class with the first image url of the first question.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Deployment
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The following actions were followed to publish this page to GitHub Pages from its [GitHub repository](https://github.com/IanaLois/Brand-Logo-Quiz):
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. Choose **Settings** from the menu choices towards the top of the page.
+2. Go to the **GitHub Pages** section.
+3. Under the **Source** section, pick **Main Branch** from the drop-down option.
+4. After choosing Main Branch, the page is automatically updated, indicating that the website has been deployed.
+5. Return to the **GitHub Pages** area to obtain the link to the deployed website.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Credits 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Content 
 
-------
+  - The core code was adapted from a YouTube tutorial, incorporating modifications. [James Q Quick](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1)
+  - The core code for the alert messages were taken from [Sweetalert2](https://sweetalert2.github.io/)
 
-## FAQ about the uptime script
+### Media
 
-**Why have you added this script?**
+The following logos used in this project were taken from multiple sources:
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+  - [Logo One](https://media.graphassets.com/PdRpmfEjRWyXsmF3Z4Ex)
+  - [Logo Two](https://www.logolynx.com/images/logolynx/18/18e88c1fad4e38a5abd0e2945b793a13.jpeg)
+  - [Logo Three](https://logodix.com/logo/10086.png)
+  - [Logo Four](https://media.designrush.com/inspiration_images/288867/conversions/PS2_9661432b7934-mobile.jpg)
+  - [Logo Five](https://1000logos.net/wp-content/uploads/2019/04/Jollibee-Logo-1996.jpg)
+  - [Logo Six](https://logowik.com/content/uploads/images/t_discord-new-black4590.jpg)
+  - [Logo Seven](https://quizbash.com/assets/img/games/logo-vansv-r.jpg)
+  - [Logo Eight](https://1000logos.net/wp-content/uploads/2017/08/Color-Dunkin-Donuts-Logo.jpg)
