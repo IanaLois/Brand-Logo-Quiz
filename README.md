@@ -87,7 +87,7 @@ The Brand Logo Quiz is a fun and interactive quiz game to test the user's genera
 
 The following actions were followed to publish this page to GitHub Pages from its [GitHub repository](https://github.com/IanaLois/Brand-Logo-Quiz):
 
-1. Choose **Settings** from the menu choices towards the top of the page.
+1. Choose ***Settings** from the menu choices towards the top of the page.
 2. Go to the **GitHub Pages** section.
 3. Under the **Source** section, pick **Main Branch** from the drop-down option.
 4. After choosing Main Branch, the page is automatically updated, indicating that the website has been deployed.
