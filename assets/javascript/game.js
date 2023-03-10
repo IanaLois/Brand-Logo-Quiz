@@ -33,7 +33,7 @@ let questions = [
     },
     {
         question: 'assets/images/logos/question-3-logo.png',
-        choice1: 'Guess',
+        choice1: 'Longchamp',
         choice2: 'Prada',
         choice3: 'Coach',
         choice4: 'Versace',
@@ -72,7 +72,7 @@ let questions = [
         answer: 4,
     },
     {
-        question: 'assets/images/logos/question-8-logo.png',
+        question: 'assets/images/logos/question-8-logo.jpg',
         choice1: 'Dunkin\' Donuts',
         choice2: 'Krispy Kreme',
         choice3: 'Donut King',
@@ -98,8 +98,8 @@ getNewQuestion = () => {
     question.src = currentQuestion.question;
     
     choices.forEach((choice) => {
-        const option = choice.dataset['option'];
-        choice.innerText = currentQuestion['choice' + option];
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
     });
     
     availableQuestions.splice(questionIndex, 1);
@@ -113,9 +113,29 @@ choices.forEach((choice) => {
         
         acceptingAnswers = false;
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['option'];
+        const selectedAnswer = selectedChoice.dataset['number'];
         
-        getNewQuestion();
+        if (selectedAnswer == currentQuestion.answer) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Spot on!',
+                showConfirmButton: false,
+                timer: 2000
+            }).then(() => {
+                getNewQuestion();
+            })
+        } else {
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Oops! That was incorrect',
+                showConfirmButton: false,
+                timer: 2000
+            }).then(() => {
+                getNewQuestion();
+            })
+        };
     });
 });
 
