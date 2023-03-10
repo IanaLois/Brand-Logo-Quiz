@@ -125,7 +125,7 @@ choices.forEach((choice) => {
                 timer: 2000
             }).then(() => {
                 getNewQuestion();
-            })
+            });
         } else {
             Swal.fire({
                 position: 'center',
@@ -135,14 +135,15 @@ choices.forEach((choice) => {
                 timer: 2000
             }).then(() => {
                 getNewQuestion();
-            })
-        };
+            });
+        }
     });
 });
 
 function increaseScore () {
     score += scorePoints;
     scoreText.innerText = score;
+    localStorage.setItem('mostRecentScore', score);
 }
 
 startGame();

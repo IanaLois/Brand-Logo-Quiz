@@ -13,17 +13,16 @@
 <body>
     <div class="game-container">
         <div id="end-section">
-            <h1 id="endScore"></h1>
-            <form>
-                <input type="text" name="username" id="username" placeholder="username"/>
-                <button type="submit" class="button glow-on-hover-end-buttons" id="saveEndScore" onclick="saveHighScore(event)" disabled>
-                    Save
-                </button>
-            </form>
+            <h1 id="endScore">0</h1>
+            <p class="end-text">
+                Amazing work!
+            </p>
             <a class="button glow-on-hover-end-buttons" href="/game.html">Play Again</a>
             <a class="button glow-on-hover-end-buttons" href="/index.html">Go Home</a>
         </div>
     </div>
-    <script src="end.js"></script>
+    
+    <!-- Link to end javascript file -->
+    <script src="/assets/javascript/end.js"></script>
 </body>
 </html>

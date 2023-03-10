@@ -179,11 +179,6 @@ h1 {
     100% { background-position: 0 0; }
 }
 
-/* Highscores Icon */
-a i {
-    font-size: 3rem;
-}
-
 #game {
     display: flex;
     flex-direction: column;
@@ -275,26 +270,90 @@ a i {
     align-items: center;
 }
 
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.end-text {
+    font-size: 3rem;
 }
 
-input {
-    font-size: 2rem;
-    color: #000;
-    letter-spacing: 0.3rem;
-    text-align: center;
-    text-decoration: none;
-    border: 0.5rem solid #000;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 2rem 0;
-    width: 100%;
+/* Media Queries */
+@media only screen and (max-width: 392px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .glow-on-hover {
+        width: 80%;
+    }
 }
 
-input::placeholder {
-    color: #aaa;
+@media only screen and (max-width: 834px) {
+    .option-text {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    img#question {
+        width: 15rem;
+    }
+    .left-area, .right-area {
+        width: 20rem;
+    }
+    #header-counters {
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 722px) {
+    .left-area, .right-area {
+    width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    options-layout {
+        margin-bottom: -6rem;
+    }
+    .left-area, .right-area {
+        margin-bottom: -3rem;
+    }
+    .option-container {
+        margin-bottom: -1rem;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .points {
+        margin-right: 2rem;
+    }
+    .options-layout {
+        margin-bottom: -7rem;
+    }
+    .left-area, .right-area {
+        margin-bottom: -4rem;
+        width: 100%;
+    }
+    .option-container {
+        margin-bottom: 0rem;
+    }
+    #counter-text {
+        font-size: 2rem;
+    }
+    #questionProgressBar {
+        width: 8rem;
+    }
+    .counter-score {
+        text-align: center;
+        font-size: 2rem;
+        margin-right: 3rem;
+    }
+    #header-counters {
+        margin-top: -14rem;
+    }
+    img#question {
+        width: 10rem;
+    }
+    #questionProgress {
+        font-size: 2rem;
+    }
+    .option-text {
+        font-size: 1.5rem;
+    }
 }
