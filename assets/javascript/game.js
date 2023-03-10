@@ -116,6 +116,7 @@ choices.forEach((choice) => {
         const selectedAnswer = selectedChoice.dataset['number'];
         
         if (selectedAnswer == currentQuestion.answer) {
+            increaseScore();
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -138,5 +139,10 @@ choices.forEach((choice) => {
         };
     });
 });
+
+function increaseScore () {
+    score += scorePoints;
+    scoreText.innerText = score;
+}
 
 startGame();

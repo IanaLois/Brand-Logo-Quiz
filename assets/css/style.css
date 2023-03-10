@@ -47,14 +47,6 @@ h1 {
     align-items: center;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
 .button {
     font-size: 3rem;
     color: #000;
