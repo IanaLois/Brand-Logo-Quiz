@@ -58,7 +58,7 @@ The Brand Logo Quiz is a fun and interactive quiz game to test the user's genera
 
   - Lighthouse
     - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
-      ![Lighthouse Report](assets/images/screenshots/lighthouse-desktop-report.png)
+    ![Lighthouse Report](assets/images/screenshots/lighthouse-result.png)
 
 ### Validator Testing 
 
