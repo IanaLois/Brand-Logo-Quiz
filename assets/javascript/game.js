@@ -1,20 +1,17 @@
 // Declare variables
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('option-text'));
-const questionProgress = document.querySelector('#questionProgress');
+const questionProgress = document.getElementById('questionProgress');
 const scoreText = document.querySelector('#score');
-const questionProgressBarFull = document.querySelector('#questionProgressBarFull');
+const questionProgressBarFull = document.getElementById('questionProgressBarFull');
 
 const scorePoints = 25;
 const maxQuestions = 8;
 
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0; 
-let questionCounter = 0; 
-let availableQuestions = []; 
+// Variables to be assigned
+let currentQuestion, acceptingAnswers, score, questionCounter, availableQuestions;
 
-let questions = [
+const questions = [
     {
         question: 'assets/images/logos/question-1-logo.png',
         choice1: 'Dickies',
@@ -93,6 +90,9 @@ getNewQuestion = () => {
         return window.location.assign('/end.html');
     }
     questionCounter++;
+    questionProgress.innerText = `Question ${questionCounter}/${maxQuestions}`;
+    questionProgressBarFull.style.width = `${(questionCounter / maxQuestions) * 100}%`;
+    
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.src = currentQuestion.question;
